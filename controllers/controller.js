@@ -9,7 +9,6 @@ const fs = require('fs');
 const LostItem = require('../models/LostItems');
 //import founditem model
 const FoundItem = require('../models/FoundItems');   
-const { uploadImageToGitHubRepo } = require('../gitrepo');
 const { extname } = require('path');
 
 
@@ -77,27 +76,7 @@ exports.PostLostItem = async (req,res)=>{
     .jpeg({quality:90})
     .toFile('public/upload/'+fileName + '.jpeg');
 
-    
-    
-    try {
-        
-        const content = fs.readFileSync(file.path);
-      
-          // Upload image to a GitHub repository
-        const data = await uploadImageToGitHubRepo({
-            owner: 'SuonSopanha',
-            repo: 'lostFoundItem',
-            path: `public/upload/${fileName}.jpeg`,
-            message: 'Add image',
-            content,
-        });
-      
-          console.log("image added to GitHub repository successfully");
-        } catch (err) {
-          console.error(err);
-          console.log(err.stack);
-        }
-    
+
     
     //send data of lostitem to database
     const lostitem = new LostItem({
@@ -131,24 +110,6 @@ exports.PostFoundItem = async (req,res)=>{
     .toFormat('jpeg')
     .jpeg({quality:90})
     .toFile('public/upload/'+fileName + '.jpeg');
-
-    try {
-        const content = fs.readFileSync(file.path);
-      
-          // Upload image to a GitHub repository
-        const data = await uploadImageToGitHubRepo({
-            owner: 'SuonSopanha',
-            repo: 'lostFoundItem',
-            path: `public/upload/${fileName}.jpeg`,
-            message: 'Add image',
-            content,
-        });
-      
-          console.log("image added to GitHub repository successfully");
-        } catch (err) {
-          console.error(err);
-          console.log(err.stack);
-        }
 
     //send data of lostitem to database
     const founditem = new FoundItem({
