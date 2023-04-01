@@ -9,6 +9,7 @@ const fs = require('fs');
 const LostItem = require('../models/LostItems');
 //import founditem model
 const FoundItem = require('../models/FoundItems');   
+const { uploadImageToGitHubRepo } = require('../gitrepo');
 const { extname } = require('path');
 
 
@@ -66,7 +67,7 @@ exports.FormFound = (req,res)=>{
 }
 
 //Post LostItem
-exports.PostLostItem = (req,res)=>{
+exports.PostLostItem = async (req,res)=>{
     const file = req.file;
     const fileName = path.basename(file.originalname,extname(file.originalname));
     //resize file
@@ -76,6 +77,27 @@ exports.PostLostItem = (req,res)=>{
     .jpeg({quality:90})
     .toFile('public/upload/'+fileName + '.jpeg');
 
+    
+    
+    try {
+        const { filename, mimetype, buffer } = req.file;
+        const content = buffer.toString('base64');
+      
+          // Upload image to a GitHub repository
+        const data = await uploadImageToGitHubRepo({
+            owner: 'SuonSopanha',
+            repo: 'YlostFoundItem',
+            path: `public/upload/${filename}.jpeg`,
+            message: 'Add image',
+            content,
+        });
+      
+          console.log("image added to GitHub repository successfully");
+        } catch (err) {
+          console.error(err);
+          res.status(500).send('Error uploading image');
+        }
+    
     
     //send data of lostitem to database
     const lostitem = new LostItem({
@@ -100,7 +122,7 @@ exports.PostLostItem = (req,res)=>{
 
 
 //Post FoundItem
-exports.PostFoundItem = (req,res)=>{
+exports.PostFoundItem = async (req,res)=>{
     const file = req.file;
     const fileName = path.basename(file.originalname,extname(file.originalname));
     //resize file
@@ -109,6 +131,25 @@ exports.PostFoundItem = (req,res)=>{
     .toFormat('jpeg')
     .jpeg({quality:90})
     .toFile('public/upload/'+fileName + '.jpeg');
+
+    try {
+        const { filename, mimetype, buffer } = req.file;
+        const content = buffer.toString('base64');
+      
+          // Upload image to a GitHub repository
+        const data = await uploadImageToGitHubRepo({
+            owner: 'SuonSopanha',
+            repo: 'YlostFoundItem',
+            path: `public/upload/${filename}.jpeg`,
+            message: 'Add image',
+            content,
+        });
+      
+          console.log("image added to GitHub repository successfully");
+        } catch (err) {
+          console.error(err);
+          res.status(500).send('Error uploading image');
+        }
 
     //send data of lostitem to database
     const founditem = new FoundItem({
