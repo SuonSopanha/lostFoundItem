@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missed</title>
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ 
+  <link rel="stylesheet" href="css/fifthpage.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB;; max-width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/" style="width:160px; text-align: center;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/aboutus" style="width:160px; text-align: center;">About&nbsp;Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/founditem" style="width:160px; text-align: center;">Found</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/lostitem" style="width:160px; text-align: center;">Lost</a>
+        </li>
+    </div>
+  </div>
+</nav>
+<!--End Navbar-->
+
+  <!--slider-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="max-width: 100%;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <!--store all img-->
+      <div class="carousel-inner" style="font-family: 'MuseoModerno', cursive;">
+        <!--first slide img-->
+        <div class="carousel-item active" >
+          <img src="Img/home1.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption " >
+            <h1 >Find your properties here</h1>
+            <h4 >The pllace where you can find it online</h4>
+            <a href="/form" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+        <!--second slide img-->
+        <div class="carousel-item">
+          <img src="Img/home2.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="/formlost" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+        <!--third slide img-->
+        <div class="carousel-item">
+          <img src="Img/home3.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="/form" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+
+        <!--fourth slide img-->
+        <div class="carousel-item">
+          <img src="Img/home4.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="/form" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+      </div>
+      <!--end store-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <!--End slider-->
+
+    <%- body -%>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="text-center text-lg-start" style="background-color:#000000">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+        <h2 class="text1" style="color:#ffffff; font-size: 24px; margin-bottom: 20px;">Contact Us</h2>
+        <ul style="list-style-type:none; padding-left:0; margin-bottom:0;">
+          <li><a href="suon.sopanha.2821@rupp.edu.kh" style="color:#ffffff; font-size: 18px;">suon.sopanha.2821@rupp.edu.kh</a></li>
+          <li><a href="leng.kola.2821@rupp.edu.kh" style="color:#ffffff; font-size: 18px;">leng.kola.2821@rupp.edu.kh</a></li>
+          <li><a href="art.sanin.2821@rupp.edu.kh" style="color:#ffffff; font-size: 18px;">art.sanin.2821@rupp.edu.kh</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+        <h4 class="text" style="color:#ffffff; font-size: 24px; margin-bottom: 20px;">Royal University of Phnom Penh</h4>
+        <h4 class="text" style="color:#ffffff; font-size: 18px; margin-bottom: 10px;">Faculty of Engineering</h4>
+        <h4 class="text" style="color:#ffffff; font-size: 18px; margin-bottom: 10px;">Information Technology Engineering</h4>
+        <h4 class="text" style="color:#ffffff; font-size: 18px; margin-bottom: 10px;">Year 2 - Semester 1</h4>
+      </div>
+    </div>
+  </div>
+  <!-- Responsive styles -->
+  <style>
+    @media (max-width: 768px) {
+      .text1 {
+        font-size: 20px;
+      }
+      .text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</footer>
+

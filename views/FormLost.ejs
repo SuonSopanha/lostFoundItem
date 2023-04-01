@@ -1,0 +1,98 @@
+
+  <!--Item info-->
+  <form action="/lostitem" method="post" enctype="multipart/form-data">
+    <div class="row"style="max-width: 100%;">
+      <div class="col-sm-6" style="background-color: rgba(92, 107, 111, 0.4);">
+        <div class="container">
+          <div class="card-body"style="margin-left:16%; margin-top:50px;">
+            <div style="font-family: 'Noto Rashi Hebrew', serif; ">
+              <h1 class="card-title">ITEM Info</h1>
+              <h4 class="card-text">Fill in your lost item information here</h4>
+  
+              <div class="mb-3" style="margin-top: 25px;font-size: 20px;">
+                <label class="form-label">ITEM name</label>
+                <input type="text" class="form-control" id="itemname" name="itemname"  style="width: 70%;font-size:20px;">
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" name="category" style="width: 70%;font-size:20px;" >
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Color</label>
+                <input type="text" class="form-control" id="color" name="color" style="width: 70%;font-size:20px;" >
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Secondary Color</label>
+                <input type="text" class="form-control" id="secondarycolor" name="secondarycolor" style="width: 70%;font-size:20px;">
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Size</label>
+                <input type="text" class="form-control" id="size" name="size" style="width: 70%;font-size:20px;">
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Lost Date</label>
+                <input type="date" class="form-control" id="lostdate" name="lostdate" style="width: 70%;font-size:20px;">
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Lost Time</label>
+                <input type="time" class="form-control" id="losttime" name="losttime" style="width: 70%;font-size:20px;" >
+              </div>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label">Lost Location</label>
+                <input type="location" class="form-control" id="lostlocation" name="location" style="width: 70%;font-size:20px;">
+              </div>
+  
+
+              <div class="mb-3"style="font-size: 20px;">
+                <label for="Image" class="form-label">Add Image</label>
+                <input type="file" class="form-control" id="image" name="image" style="background-color: rgba(92, 107, 111, 0.4);;width: 70%;color:rgb(0, 0, 0);font-size:20px;">
+              </div>
+
+              <div class="mb-5"style="font-size: 20px;">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="5" cols="50" style="width: 70%;font-size:20px;"></textarea>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6" style="margin-top:50px;">
+          <div class="container">
+            <div style="font-family: 'Noto Rashi Hebrew', serif; margin-left: 16%;">
+              <h1 class="card-title">Owner Info</h1>
+  
+              <div class="mb-3"style="font-size: 20px;">
+                <label class="form-label" >Name</label>
+                <input type="text" class="form-control" id="username" name="username" style="background-color: rgba(92, 107, 111, 0.4);;width: 70%;color:rgb(0, 0, 0);font-size:20px;">
+              </div>
+
+              <div class="mb-3"style="font-size: 20px;">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Example@gmail.com" aria-describedby="emailHelp"style="background-color: rgba(92, 107, 111, 0.4);;width: 70%;color:rgb(0, 0, 0);font-size:20px;">
+              </div>
+    
+              <div class="mb-4"style="font-size: 20px;">
+                <label for="phonenumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="+855" style="background-color: rgba(92, 107, 111, 0.4);;width: 70%;color:rgb(0, 0, 0);font-size:20px;">
+              </div>
+              
+              <div class="mt-3">
+                <button type="submit " class="btn btn-success btn-lg ">Submit</button>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </form>
+  <!--End Owner info-->
+     
+

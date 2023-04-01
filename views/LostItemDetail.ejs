@@ -1,0 +1,67 @@
+
+  <!--card-->
+  
+    <div class="container-fluid text-center" style="background-color:#219882;">
+      <div class="card-header"style="font-size:40px;font-family: 'Noto Rashi Hebrew', serif;Color:white">
+        <%- data.itemName %>
+      </div>
+    </div>
+
+  <div class="container mb-4" style="max-width: 100%;">
+    <div class="row" style="max-width: 100%;">
+      <div class="col-md-4"style="text-align:center;margin-top:30px">
+        <img src="upload/<%- data.image %>" alt="..."style="margin-bottom:20px;width: 300px;height:300px;margin-left:5%;">
+      </div>
+
+      <div class="col-md-8" style="max-width: 100%;">
+        <div clas="container-body"style="margin-top:5%;font-size:22px;margin-bottom:100px;font-family: 'Noto Rashi Hebrew', serif;margin-left:30%">
+          <p class="card-title">Category : <%- data.category %></p>
+          <p class="card-title">Color : <%- data.color %></p>
+          <p class="card-title">Secondary Color : <%- data.secondaryColor %></p>
+          <p class="card-title">Size : <%- data.size %></p>
+          <p class="card-title">Date lost : <%- data.lostLocation %></p>
+          <p class="card-title">Time lost : <%- data.lostTime %></p>
+          <p class="card-title">Location lost : <%- data.lostLocation %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Desrcibe-->
+  <div class="caontainer-fluid mb-4" style="background-color:#219882; max-width: 100%;color: white;"> 
+    <div class="row " style="max-width: 100%;">
+      <div class="col-md-12">
+        <div class="card-body"style="margin-left: 7%;margin-top:10px;font-size:21px;margin-bottom:50px">
+          <p class="card-title"style="font-size:30px;font-family: 'Fira Sans Condensed', sans-serif;">Description</p>
+          <p class="card-text"style="font-size:22px; font-family: 'Fira Sans Condensed', sans-serif;">Owner: <%- data.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center" style="max-width: 100%;">
+    <div style="font-size:40px;font-family: 'Noto Rashi Hebrew', serif;">
+     Owner Contact
+    </div>
+  </div>
+
+  <div class="conatainer mb-4" >
+    <div class="row" style="max-width: 100%;">
+      <div class="col-md-12" >
+        <div class="container-body"style="margin-top:10px;font-size:24px;font-family: 'Noto Rashi Hebrew', serif;margin-left:32%">
+          <p class="card-title">Name : <%- data.ownerName %></p>
+          <p class="card-title">Email : <%- data.ownerEmail %></p>
+          <p class="card-title">Phone : <%- data.ownerPhone %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--botton post-->
+   <div class="card-body"style="text-align:center;margin-bottom:50px;">
+    <a href="/lostitem" class="btn text-light" role="button" style="width: 100px;font-size: 20px;font-family: 'Noto Rashi Hebrew', serif;background-color: #219882;color: aliceblue;margin-right: 2%;">BACK</a>
+    <a href="/formlost" class="btn text-light" role="button" style="width: 100px;font-size: 20px;font-family: 'Noto Rashi Hebrew', serif;background-color: #219882;color: aliceblue;margin-left: 2%;">POST</a>
+ </div>
+
+<!--end botton post-->
+    

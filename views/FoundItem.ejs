@@ -1,0 +1,115 @@
+
+
+  <!--Item info-->
+  <div class="row "style="max-width: 100%; font-family: 'Noto Rashi Hebrew', serif;">
+    <div class="col-sm-7" style="background-color: rgb(168, 189, 196);color: #DEE8EB;">
+      <div class="container">
+        <div class="card-body">
+       
+            <h1 class="card-title" style="margin-top: 1%;margin-bottom: 2%;margin-left:10% ;color: black;">Recent Found Item</h1>
+
+            <form action="/searchfound" method="post" class="d-flex m-3">
+              <input class="form-control me-2 border-0" name="search" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <% if(data != null){ %>
+              <% for(var i = 0; i < data.length; i++){ %>
+                
+                <div class="container mb-4 mt-4" style="max-width: 600px;">
+                  <div class="row g-0" style="background-color: aliceblue;">
+                    <div class="col-md-5">
+                      <img src="upload/<%= data[i].image %>" class="img-fluid card-img-top h-100" alt="..." >
+                    </div>
+                    <div class="col-md-7" style="margin-bottom: 4%;">
+                      <div class="card-body" style="color: black;margin-left: 4%;margin-top: 4%;">
+                        <h1 class="card-title mb-3 mt-3"><%- data[i].itemName %></h1>
+                        <h5 class="m-2">Category : <%- data[i].category %></h5>
+                        <h5 class="m-2">Color : <%- data[i].color %></h5>
+                        <h5 class="m-2">Location : <%- data[i].foundLocation %></h5>
+                        <a href="/found/<%= data[i]._id %>" class="btn mt-3">See more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+              <% } %>
+            <% }  else { %>
+              <h1>No item found</h1>
+            <% } %>
+
+            <nav aria-label="Page navigation example">
+              <ul class="pagination d-flex justify-content-center mx-auto">
+                <% if (page > 1) { %>
+                  <li class="page-item"><a class="page-link" href="?page=<%= page - 1 %>">Previous</a></li>
+                <% } %>
+        
+                <% for (let i = 1; i <= Math.ceil(count / limit); i++) { %>
+                  <% if (i === page) { %>
+                    <li class="page-item active"><a class="page-link" href="?page=<%= i %>"><%= i %></a></li>
+                  <% } else { %>
+                    <li class="page-item"><a class="page-link" href="?page=<%= i %>"><%= i %></a></li>
+                  <% } %>
+                <% } %>
+        
+                <% if (page < Math.ceil(count / limit)) { %>
+                  <li class="page-item"><a class="page-link" href="?page=<%= page + 1 %>">Next</a></li>
+                <% } %>
+              </ul>
+            </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="row">
+        <div class="card-body"style="margin-top:5%; ">
+
+          <h5 class="card-title mb-3 d-flex justify-content-center mx-auto" style="margin-top: 1%;margin-bottom: 2%;margin-left:10% ;color: black; font-weight: lighter;">Returned Item</h5>
+            <div class="row g-0" >
+              <div class="container mb-2" style="max-width: 400px;">
+                <div class="row g-0" style="background-color: aliceblue;">
+                  <div class="col-md-5">
+                    <img src="Img/key.jpg" class="img-fluid card-img-top" alt="..." style="width:max-content; ">
+                  </div>
+                  <div class="col-md-7" style="margin-bottom: 4%;">
+                    <div class="card-body" style="color: black;margin-left: 4%;margin-top: 4%;">
+                      <h3 class="card-title mb-1">Key</h3>
+                      <p class="m-0">Category : Key</p>
+                      <p class="m-0">Color : silver</p>
+                      <p class="m-0">Location : Sen Sok</p>
+                      <a href="#" class="btn mt-2">See more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-0" >
+              <div class="container mb-2" style="max-width: 400px;">
+                <div class="row g-0" style="background-color: aliceblue;">
+                  <div class="col-md-5">
+                    <img src="Img/key.jpg" class="img-fluid card-img-top" alt="..." style="width:max-content; ">
+                  </div>
+                  <div class="col-md-7" style="margin-bottom: 4%;">
+                    <div class="card-body" style="color: black;margin-left: 4%;margin-top: 4%;">
+                      <h3 class="card-title mb-1">Key</h3>
+                      <p class="m-0">Category : Key</p>
+                      <p class="m-0">Color : silver</p>
+                      <p class="m-0">Location : Sen Sok</p>
+                      <a href="#" class="btn mt-2">See more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+<!--End Owner info-->
+  
+  
+     
+  
+
