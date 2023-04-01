@@ -81,7 +81,7 @@ exports.PostLostItem = async (req,res)=>{
     
     try {
         
-        const content = file.read();
+        const content = fs.readFileSync(file.path);
       
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
@@ -133,7 +133,7 @@ exports.PostFoundItem = async (req,res)=>{
     .toFile('public/upload/'+fileName + '.jpeg');
 
     try {
-        const content = file.read();
+        const content = fs.readFileSync(file.path);
       
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
