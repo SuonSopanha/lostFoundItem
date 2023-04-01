@@ -80,8 +80,8 @@ exports.PostLostItem = async (req,res)=>{
     
     
     try {
-        const { filename, mimetype, buffer } = req.file;
-        const content = buffer.toString('base64');
+        
+        const content = file.read();
       
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
@@ -95,7 +95,7 @@ exports.PostLostItem = async (req,res)=>{
           console.log("image added to GitHub repository successfully");
         } catch (err) {
           console.error(err);
-          res.status(500).send('Error uploading image');
+          console.log(err.stack);
         }
     
     
@@ -133,8 +133,7 @@ exports.PostFoundItem = async (req,res)=>{
     .toFile('public/upload/'+fileName + '.jpeg');
 
     try {
-        const { filename, mimetype, buffer } = req.file;
-        const content = buffer.toString('base64');
+        const content = file.read();
       
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
@@ -148,7 +147,7 @@ exports.PostFoundItem = async (req,res)=>{
           console.log("image added to GitHub repository successfully");
         } catch (err) {
           console.error(err);
-          res.status(500).send('Error uploading image');
+          console.log(err.stack);
         }
 
     //send data of lostitem to database
