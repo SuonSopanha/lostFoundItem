@@ -86,7 +86,7 @@ exports.PostLostItem = async (req,res)=>{
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
             owner: 'SuonSopanha',
-            repo: 'YlostFoundItem',
+            repo: 'lostFoundItem',
             path: `public/upload/${filename}.jpeg`,
             message: 'Add image',
             content,
@@ -139,7 +139,7 @@ exports.PostFoundItem = async (req,res)=>{
           // Upload image to a GitHub repository
         const data = await uploadImageToGitHubRepo({
             owner: 'SuonSopanha',
-            repo: 'YlostFoundItem',
+            repo: 'lostFoundItem',
             path: `public/upload/${filename}.jpeg`,
             message: 'Add image',
             content,
